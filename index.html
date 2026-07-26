@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App using javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="displayNums">
+                </div>
+
+                <div class="cal-num">
+                    <input type="button" class="operator" value="AC" onclick="displayNums.value = '';">
+                    <input type="button" value="DEL" class="operator"  onclick="displayNums.value = displayNums.value.toString().slice(0, -1)">
+                    <input type="button" value="." class="operator" onclick="displayNums.value += '.';">
+                    <input type="button" value="/" class="operator"  onclick="displayNums.value += '/';">
+                </div>
+
+                <div class="cal-num">
+                    <input type="button" value="7" onclick="displayNums.value += '7';">
+                    <input type="button" value="8" onclick="displayNums.value += '8';">
+                    <input type="button" value="9" onclick="displayNums.value += '9';">
+                    <input type="button" class="operator" value="*" onclick="displayNums.value += '*';">
+                </div>
+
+                <div class="cal-num">
+                    <input type="button" value="4" onclick="displayNums.value += '4';">
+                    <input type="button" value="5" onclick="displayNums.value += '5';">
+                    <input type="button" value="6" onclick="displayNums.value += '6';">
+                    <input type="button" class="operator" value="-" onclick="displayNums.value += '-';">
+                </div>
+
+                <div class="cal-num">
+                    <input type="button" value="1" onclick="displayNums.value += '1';">
+                    <input type="button" value="2" onclick="displayNums.value += '2';">
+                    <input type="button" value="3" onclick="displayNums.value += '3';">
+                    <input type="button" class="operator" value="+" onclick="displayNums.value += '+';">
+                </div>
+
+                <div class="cal-num">
+                    <input type="button" value="00" onclick="displayNums.value += '00';">
+                    <input type="button" value="0" onclick="displayNums.value += '0';">
+                    <input type="button" value="=" class="equal operator" onclick="displayNums.value = eval(displayNums.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
